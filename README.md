@@ -11,23 +11,23 @@ necesarios, su procedimiento y pertenecerá a una categoría de plato.
   * Crear
   * Borrar
   * Modificar
-  * Listar (categoría, nacionalidad, chef, ingrediente, dificultad)
+  * Listar (nombre, categoría, nacionalidad, chef, ingrediente, dificultad)
   * Imagen
+  * Procedimiento
+  * Ingredientes
   * Calificación
   
 * Chefs
   * Crear
   * Borrar
   * Modificar
-  * Listar (especialidad, nacionalidad)
+  * Listar (nombre, especialidad, nacionalidad)
   * Imagen
+  * Biografía
+  * Recetas
  
 * Categorías 
   * Crear
   * Borrar 
   * Modificar
-
-* Nacionalidad 
-  * Crear
-  * Borrar
-  * Modificar
+  * Imagen
