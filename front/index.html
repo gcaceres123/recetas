@@ -1,0 +1,112 @@
+<!doctype html>
+<html ng-app="endpointsApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ABM</title>
+    <!-- Cargamos bootstrap -->
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        @media (min-width: 768px) {.bd-placeholder-img-lg {font-size: 3.5rem;}}
+      .mySlides {display:none;}
+      .w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+      .w3-content,.w3-auto{margin-left:auto;margin-right:auto}.w3-content{max-width:980px}.w3-auto{max-width:1140px}
+      .w3-display-left{position:absolute;top:50%;left:0%;transform:translate(0%,-50%);-ms-transform:translate(-0%,-50%)}
+      .w3-display-right{position:absolute;top:50%;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%)}
+      .w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}
+      .w3-btn,.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+      .w3-btn,.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+      .w3-disabled,.w3-btn:disabled,.w3-button:disabled{cursor:not-allowed;opacity:0.3}.w3-disabled *,:disabled *{pointer-events:none}
+      .w3-dropdown-hover:hover > .w3-button:first-child,.w3-dropdown-click:hover > .w3-button:first-child{background-color:#ccc;color:#000}
+      .w3-bar-block .w3-dropdown-hover .w3-button,.w3-bar-block .w3-dropdown-click .w3-button{width:100%;text-align:left;padding:8px 16px}
+      .w3-bar .w3-button{white-space:normal}
+      .w3-dropdown-hover.w3-mobile,.w3-dropdown-hover.w3-mobile .w3-btn,.w3-dropdown-hover.w3-mobile .w3-button,.w3-dropdown-click.w3-mobile,.w3-dropdown-click.w3-mobile .w3-btn,.w3-dropdown-click.w3-mobile .w3-button{width:100%}
+      .w3-button:hover{color:#000!important;background-color:#ccc!important}
+      .w3-tooltip,.w3-display-container{position:relative}.w3-tooltip .w3-text{display:none}.w3-tooltip:hover .w3-text{display:inline-block}
+      .w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+    </style>
+    <!-- Cargamos angular -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+    <!-- Cargamos el javascript de angular -->
+    <script src="index.js"></script>
+	<link rel="icon" href="book.png">
+	
+  </head>
+  <body ng-controller="mainController" data-spy="scroll" data-target=".navbar" data-offset="50">
+	  
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+			<img src="book.png" class="bi me-2" width="30" height="32" role="img">
+          </a>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li>
+              <a href="index.html" class="nav-link px-2 text-secondary">Home</a>
+            </li>
+            <li>
+              <a href="recetasView.html" class="nav-link px-2 text-white">Todas las recetas</a>
+            </li>
+            <li>
+              <a href="abmView.html" class="nav-link px-2 text-white">ABM Recetas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+	<div>
+		<ul></ul>
+	  </div>
+	<div class="w3-content w3-display-container">
+		<img  width="500" height="600" class="mySlides" src="foto1.jpg" style="width:100%">
+		<img  width="500" height="600" class="mySlides" src="foto2.jpg" style="width:100%">
+		<img  width="500" height="600" class="mySlides" src="foto3.jpg" style="width:100%">
+	  
+		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	  </div>
+	  
+	  <script>
+	  var slideIndex = 1;
+	  showDivs(slideIndex);
+	  
+	  function plusDivs(n) {
+		showDivs(slideIndex += n);
+	  }
+	  
+	  function showDivs(n) {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		if (n > x.length) {slideIndex = 1}
+		if (n < 1) {slideIndex = x.length}
+		for (i = 0; i < x.length; i++) {
+		  x[i].style.display = "none";  
+		}
+		x[slideIndex-1].style.display = "block";  
+	  }
+	  </script>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link px-2 text-muted">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="recetasView.html" class="nav-link px-2 text-muted">Todas las recetas</a>
+          </li>
+          <li class="nav-item">
+            <a href="abmView.html" class="nav-link px-2 text-muted">ABM Recetas</a>
+          </li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+      </footer>
+    </div>
+    <!-- /container -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="	sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
