@@ -11,6 +11,5 @@ necesarios, su procedimiento y pertenecerá a una categoría de plato.
   * Crear
   * Borrar
   * Modificar
-  * Listar (nombre, chef, ingredientes, procedimientos)
-  * Procedimiento
-  * Ingredientes
+  * Listar todas las recetas (nombre, chef, ingredientes, procedimientos)
+  * Listar receta por id (nombre, chef, ingredientes, procedimientos)
